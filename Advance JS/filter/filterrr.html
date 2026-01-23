@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .row {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .card {
+      width: 18rem;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body class="p-4">
+  <h1>API Call - Product Filter</h1>
+
+  <select id="Category" onchange="handleChange()">
+    <option value="all">All</option>
+    <option value="men's clothing">Men's Clothing</option>
+    <option value="jewelery">Jewelery</option>
+    <option value="electronics">Electronics</option>
+    <option value="women's clothing">Women's Clothing</option>
+  </select>
+
+  <div id="box" class="row"></div>
+
+  <script>
+    let allProducts = [];
+    const box = document.getElementById("box");
+    const categorySelect = document.getElementById("Category");
+
+    fetch("https://fakestoreapi.com/products")
+      .then(response => response.json())
+      .then(data => {
+        allProducts = data;
+        displayProducts(allProducts);
+      });
+
+    function displayProducts(products) {
+      box.innerHTML = ""; 
+      products.forEach(product => {
+        box.innerHTML += `
+          <div class="card">
+            <img src="${product.image}" class="card-img-top" alt="Product">
+            <div class="card-body">
+              <h5 class="card-title">${product.title}</h5>
+              <p class="card-text">${product.category}</p>
+              <a href="#" class="btn btn-primary">$${product.price}</a>
+            </div>
+          </div>`;
+      });
+    }
+
+    function handleChange() {
+      const selectedCategory = categorySelect.value;
+      if (selectedCategory === "all") {
+        displayProducts(allProducts);
+      } else {
+        const filtered = allProducts.filter(
+          product => product.category === selectedCategory
+        );
+        displayProducts(filtered);
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

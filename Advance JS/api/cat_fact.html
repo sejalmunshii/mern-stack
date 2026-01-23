@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <button id="btn">generate cat fact</button>
+    <p id="para"></p>
+
+
+    <script>
+        const button=document.querySelector("#btn");
+        const para=document.querySelector("#para");
+        const url= "https://catfact.ninja/fact";
+
+
+        // const fact= async ()=>{
+        //     console.log("getting api...");
+        //     let promise = await fetch(url);
+        //     console.log(promise);//json formate  
+        //     let js_formate= await promise.json();
+        //     console.log(js_formate);
+        //     para.innerText=js_formate.fact;  
+        // }
+        
+        function fact() { 
+            fetch(url).then((responce)=>{
+                return responce.json();
+            }).then((data)=>{
+                console.log(data);
+                para.innerText=data.fact;  
+
+            })
+         }
+
+        button.addEventListener("click",fact);
+    </script>
+</body>
+</html>

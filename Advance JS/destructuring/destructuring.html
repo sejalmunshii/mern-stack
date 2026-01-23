@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>documenet</title>
+</head>
+
+<body>
+    <h1>Destructuring,rest,spread</h1>
+
+    <script>
+        // // Task 1:Create an array of 4 car brands:
+        // const cars = ["BMW", "Audi", "Tesla", "Toyota"];
+        // const [first, second] = cars;
+
+
+        // console.log(first);
+        // console.log(second);
+
+
+        // // Task 2:Skipping Values
+        // const numbers = [10, 20, 30, 40, 50];
+        // const [one, , three] = numbers;
+        // console.log(one);
+        // console.log(three);
+
+
+        // // task 3:Default Value in Array Destructuring
+        // const fruits = ["Apple"];
+        // const [x, y = "banana"] = fruits;
+        // console.log(x);
+        // console.log(y);
+
+        // //Task 4: Object Destructuring
+        // const student = { name: "Ravi", age: 21, course: "B.Tech" };
+        // //const{name}=student;
+        // const { age } = student;
+        // const { course } = student;
+        // //console.log(name);
+        // console.log(age);
+        // console.log(course);
+
+        // //Task 5: Object Destructuring with Renaming
+        // const { name = student_name } = student;
+        // console.log(name);
+
+        // //Task 6: Nested Object Destructuring
+        // const employee = {
+        //     id: 101,
+        //     details: {
+        //         fname: "Neha",
+        //         department: "HR",
+        //     },
+        // };
+        // const { fname, department } = employee.details;
+        // console.log(fname)
+        // console.log(department)
+
+        // //Task 7: Spread Operator with Arrays
+        // const even = [2, 4, 6];
+        // const odd = [1, 3, 5];
+
+        // console.log(...even, ...odd);
+
+        // //Task 8: Spread Operator with Objects
+        // const user = { name: "Amit", city: "Pune" };
+        // const contact = { phone: "9999999999", email: "amit@mail.com" };
+        // const combine = { ...user, ...contact }
+
+        // console.log(combine);
+
+        // //Task 9: Rest Operator
+        // function addnumber(...number) {
+        //     let sum = number;
+        //     console.log(sum);
+        // }
+        // addnumber(2, 2, 2);
+
+        // //Task 10: Default Function Parameters
+
+        // function greet(...name) {
+        //     console.log("hello" + name + "welcome")
+        // }
+        // greet("sejal");
+
+
+        //Create a function studentInfo that accepts an object like:
+        let obj = {
+            name: "Anjali",
+            age: 22,
+            city: "Delhi",
+            course: "CSE"
+        }
+        const {name, age, city, course} = obj;
+        function studentinfo(obj) {
+            console.log(`Name: ${name} | Age: ${age} | City: ${city} | Course: ${course}`);
+            
+        }
+        studentinfo(obj);
+    </script>
+</body>
+
+</html>

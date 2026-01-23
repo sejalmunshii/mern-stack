@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      Use setTimeout() to print numbers 1 → 2 → 3 with a delay of 1 second each.
+    </h1>
+    <div id="output"></div>
+    <script>
+      const output = document.getElementById("output");
+
+      setTimeout(() => {
+        output.innerHTML += "1";
+        setTimeout(() => {
+          output.innerHTML += "2";
+          setTimeout(() => {
+            output.innerHTML += "3";
+          }, 1000);
+        }, 1000);
+      }, 1000);
+
+    </script>
+  </body>
+</html>

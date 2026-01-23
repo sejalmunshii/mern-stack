@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 70%;
+            height: 450px;
+            margin-top: 100px;
+            margin: auto;
+            border: 1px solid gray;
+            position: relative;
+            overflow: hidden;
+        }
+        #slide{
+            width: 100%;
+            position: absolute;
+            transition: 1s;
+        }
+        .body{
+            position: relative;
+        }
+        .prev{
+            position: absolute;
+            top:230px;
+            left: 100px;
+          
+        }
+        .next{
+            position: absolute;
+            top: 230px;
+            right: 100px;
+
+        }
+        button{
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="container">
+        <img src="https://picsum.photos/id/100/1000/500" id="slide" alt="">
+        <img src="https://picsum.photos/id/200/1000/500" id="slide" alt="">
+        <img src="https://picsum.photos/id/250/1000/500" id="slide" alt="">
+        <img src="https://picsum.photos/id/50/1000/500" id="slide" alt="">
+        <img src="https://picsum.photos/id/30/1000/500" id="slide" alt="">
+    </div>
+    <button onclick="prev()" class="prev">Prev</button>
+    <button onclick="next()" class="next">next</button>
+    <script>
+        let slide=document.querySelectorAll("#slide")
+        let counter=0;
+        //console.log(slide)
+        slide.forEach((image,index)=>{
+             image.style.left=`${index * 100}%`
+        })
+        let slider=()=>{
+            slide.forEach((slide)=>{
+                slide.style.transform=`translateX(-${counter * 100}%)`
+            })
+        }
+        function prev() {
+            counter--;
+            slider();
+          }
+            function next() {
+            counter++;
+            slider();
+          }
+    </script>
+</body>
+</html>

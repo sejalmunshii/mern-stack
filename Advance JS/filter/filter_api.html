@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APi Call</title>
+
+
+    <!-- Bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
+<style>
+    .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
+<body>
+    <h1>Api Call</h1>
+
+    <select title="Category" id="Category" onchange="handleChange()">Category
+        <option name="All">ALL</option>
+        <option name="men's clothing">men cloths</option>
+        <option name="jewellory">jewellory</option>
+        <option name="eletronic">eletronics</option>
+        <option name="woman">woman cloth</option>
+    </select>
+
+    <div id="box">
+    </div>
+    <script>
+        // let man = document.getElementById("men");
+        // let woman = document.getElementById("woman");
+        // let jwellory = document.getElementById("jwellory");
+        // let eletronic = document.getElementById("eketronic");
+        let box = document.getElementById("box")
+        fetch("https://fakestoreapi.com/products")
+            .then((response) => response.json()
+            )
+            .then((data) => {
+                console.log(data)
+                data.forEach(product => {
+                    box.innerHTML += `<div class="card" style="width: 18rem;">
+                                        <img src=${product.image} class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${product.title}</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                        </div>`
+                });
+            }
+            );
+            let Category = document.getElementById("Category")
+        function handleChange() {
+            console.log("hello")
+            fetch("https://fakestoreapi.com/products")
+                .then((response) => response.json()
+                ).then(product => {
+                    product.filter((product) => {
+                        console.log(product.category === "men's clothing");
+
+                        const matchesSearch = product.title
+                            .toLowerCase()
+                            .includes(product.category.toLowerCase());
+                            // console.log(matchesSearch);
+                        const matchesCategory =
+                            Category === "All" || product.category === Category;
+                        console.log("matchesCategory", matchesCategory);
+                    })
+                })
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

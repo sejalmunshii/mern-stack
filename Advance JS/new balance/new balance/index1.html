@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            /* space between cards */
+        }
+        .col-25 {
+            flex: 0 0 23%;
+            /* roughly 1/4 of the row, minus gaps */
+            box-sizing: border-box;
+        }
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="row">
+                    <div class="left_navitems">
+                        <ul class="row">
+                            <li> <img src="./assets/logo.png" alt="NB Logo"></li>
+                            <li><a href="#">New</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Kids</a></li>
+                            <li><a href="#" class="active">Back to School</a></li>
+                            <li><a href="#">Sale</a></li>
+                        </ul>
+                    </div>
+                    <div class="right_navitems row">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search">
+                        </div>
+                        <div class="navicon">
+                            <i class="far fa-user icon"></i>
+                            <i class="fas fa-shopping-cart icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="section-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 hero-text">
+                    <h1>The 574</h1>
+                    <p>Worn by anyone.</p>
+                    <div class="hero-buttons">
+                        <button class="btn">Shop adults</button>
+                        <button>Shop kids</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-2">
+        <div class="container">
+            <div class="row">
+                <div class=" col-10 trending-header">
+                    <h2>Trending now</h2>
+                    <div class="category-tabs row col-10">
+                        <button class="tab-btn active"><a href="#">Women</a> </button>
+                        <button class="tab-btn active"><a href="#">men</a> </button>
+                        <button class="tab-btn active"><a href="#">Kids</a> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section-3 -->
+    <section id="section-3">
+        <div class="row products-container">
+            <!-- Products will go here -->
+        </div>
+        <div class="row products-container" id="products-container">
+            <!-- API products will load here -->
+        </div>
+    </section>
+    <!-- section-3 -->
+    <section id="section-4">
+        <div class="container slider">
+            <div class="slider-btn">
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+            <div class="shop-all">
+                <button>Shop All</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section>
+        <div class="row">
+            <div class="col-50 img-width hero-buttons">
+                <img src="./assets/running1.jpg" alt="">
+                <h2>Running, uninterrupted</h2>
+                <p>Keep up your pace in any climate</p>
+                <button>Shop Now</button>
+
+            </div>
+            <div class="col-50 img-width hero-buttons">
+                <img src="./assets/running2.jpg" alt="">
+                <h2>The 1000</h2>
+                <p>A new kind of classic</p>
+                <button>Shop Now</button>
+                <button>Shop reto running</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="col-10 recommend">
+            <h3>Recommended for you</h3>
+        </div>
+        <div class="row products-container">
+            <div class="col-25">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/u9060etn_nb_02_i.webp" alt="9060 Sneakers">
+                    </div>
+                    <div class="product-info">
+                        <h3>9060</h3>
+                        <p class="product-category">Unisex</p>
+                        <p class="product-price">$149.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/u9060etn_nb_02_i.webp" alt="9060 Sneakers">
+                    </div>
+                    <div class="product-info">
+                        <h3>9060</h3>
+                        <p class="product-category">Unisex</p>
+                        <p class="product-price">$149.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/u9060etn_nb_02_i.webp" alt="9060 Sneakers">
+                    </div>
+                    <div class="product-info">
+                        <h3>9060</h3>
+                        <p class="product-category">Unisex</p>
+                        <p class="product-price">$149.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/u9060etn_nb_02_i.webp" alt="9060 Sneakers">
+                    </div>
+                    <div class="product-info">
+                        <h3>9060</h3>
+                        <p class="product-category">Unisex</p>
+                        <p class="product-price">$149.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row slider ">
+            <div class="slider-btn">
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+        </div>
+        <div class="text">
+            <p>Discover the perfect blend of timeless style, quality, and performance. Shop New Balance shoes, sneakers,
+                and athletic wear.
+            </p>
+        </div>
+    </section>
+    <footer class="footer">
+        <section>
+            <div class="footer-bottom-barr">
+                <div class="row">
+                    <div class="col-10 hero-buttons">
+                        <p>Be the first to know about new arrivals</p>
+                    </div>
+                    <div class="hero-buttons">
+                        <button>
+                            Sign up
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="row">
+            <div class="col-80 row">
+                <div class="col-20">
+                    <h4>Help</h4>
+                    <ul class="foot-ul">
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Start a return</a></li>
+                        <li><a href="#">Track your order</a></li>
+                        <li><a href="#">Become a member</a></li>
+                        <li><a href="#">Size guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">How early access works</a></li>
+                    </ul>
+                </div>
+                <div class="col-20">
+                    <h4>Shop</h4>
+                    <ul class="foot-ul">
+                        <li><a href="#">Find a store</a></li>
+                        <li><a href="#">Gift cards</a></li>
+                        <li><a href="#">Shipping information</a></li>
+                        <li><a href="#">Sale exclusions</a></li>
+                        <li><a href="#">Custom uniforms</a></li>
+                        <li><a href="#">Reconsidered</a></li>
+                    </ul>
+                </div>
+                <div class="col-20">
+                    <h4>About Us</h4>
+                    <ul class="foot-ul">
+                        <li><a href="#">Our Purpose</a></li>
+                        <li><a href="#">Responsible leadership</a></li>
+                        <li><a href="#">New Balance Foundation</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">The TRACK at New Balance</a></li>
+                        <li><a href="#">Press box</a></li>
+                        <li><a href="#">Medical Plan Information</a></li>
+                    </ul>
+                </div>
+                <div class="col-20">
+                    <h4>For You</h4>
+                    <ul class="foot-ul">
+                        <li><a href="#">Special discounts</a></li>
+                        <li><a href="#">Idea submission</a></li>
+                        <li><a href="#">Affiliate program</a></li>
+                        <li><a href="#">Counterfeit products</a></li>
+                        <li><a href="#">Accessibility statement</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-20">
+                <h4 style="font-family:ITC Garamond W01 ; font-size: 25px;">Fearlessly Independent</h4>
+                <img src="./assets/logo.png" alt="New Balance Logo" width="20%">
+                <p>Independent since 1906, we empower people through sport and %raftsmanship to create positive
+                    change in
+                    communities around the world.</p>
+                <div class="social-icons">
+                    <img src="./aseest/img/footer-icon-removebg-preview.png" width="50%" alt="">
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="footer-sec">
+                <div class="row">
+                    <div>
+                        <span>New Balance family of brands</span>
+                    </div>
+                    <div>
+                        <img src="./aseest/img/brine-logo.svg" alt="" width="30%">
+                    </div>
+                    <div>
+                        <img src="./aseest/img/teamsports-logo.svg" alt="" width="30%">
+                    </div>
+                    <div>
+                        <img src="./aseest/img/warror.svg" alt="" width="30%">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10"> <img src="./assets/flag.jpeg" alt="" width="20%">
+                        <b>US | English</b>
+                    </div>
+                    <div class="col-10 foot-ul ">
+                        <a href="privacy">privacy</a> <br>
+                        <a href="policy">policy</a>
+                    </div>
+                    <div class="col-10 foot-ul">
+                        <a href="Responsible">Responsible</a> <br>
+                        <a href="Disclosure">Disclosure</a>
+                    </div>
+                    <div class="col-10 foot-ul">
+                        <a href="Website Terms &">Website Terms &</a> <br>
+                        <a href="Conditions">Conditions</a>
+
+                    </div>
+                    <div class="col-10 foot-ul">
+                        <a href="Early Access">Early Access</a><br>
+                        <a href="Official Rules">Official Rules</a>
+                    </div>
+                    <div class="col-10 foot-ul">
+                        <a href="CA Supply Chains Act (SB 657) and">CA Supply Chains Act (SB 657) and</a><br>
+                        <a href="Modern Slavery Act Statement">Modern Slavery Act Statement</a>
+                    </div>
+                    <div class="col-10 foot-ul">
+                        <a href="Health Data">Health Datas</a><br>
+                        <a href="Privacy Policy">Privacy Policy</a>
+                    </div>
+                    <div class="col-10 foot-ul">
+                        <a href="Do Not Sell or Share My Personal">Do Not Sell or Share My Personal</a><br>
+                        <a href="Informationprivacy">Informationprivacy</a>
+                    </div>
+                    <div class="col-10 foot-ul">
+                        <a href="Copyright 2025,">Copyright 2025,</a><br>
+                        <a href="New Balance">New Balance</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script>const container = document.getElementById("products-container");
+
+        fetch("https://fakestoreapi.com/products")
+            .then(res => res.json())
+            .then(data => {
+                data.forEach(product => {
+                    container.innerHTML += `
+        <div class="col-25">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="${product.image}" alt="${product.title}">
+            </div>
+            <div class="product-info">
+              <h3>${product.title}</h3>
+              <p class="product-category">${product.category}</p>
+              <p class="product-price">$${product.price}</p>
+            </div>
+          </div>
+        </div>
+      `;
+                });
+            })
+            .catch(err => console.error("Error fetching products:", err));
+    </script>
+
+
+</body>
+
+</html>
