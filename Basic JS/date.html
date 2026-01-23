@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid red;
+            background-color: rgb(109, 157, 212);
+            text-align: center;
+            width: 200px;
+        }
+        li{
+            list-style: none;
+        }
+        button{
+            background-color: blue;
+            color: aliceblue;
+            border: none;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Start Date:</td>
+            <td>
+                <input type="date" id="sdate">
+            </td>  
+        </tr>
+        <tr>
+            <td>End Date:</td>
+            <td>
+                <input type="date" id="edate">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="calculate()">Calculate Interval</button>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <h2>Result:</h2>
+        <ul>
+            <li id="days">Days:</li>
+            <li id="month">months:</li>
+            <li id="year">years:</li>
+            <li id="week">weeks:</li>
+        </ul>
+    </div>
+    <script>
+       function calculate(){
+        let first_date=new Date(document.getElementById("sdate").value);
+        let last_date=new Date(document.getElementById("edate").value);
+        let time=last_date-first_date;
+        let day = 1000*60*60*24;
+        let days=Math.floor(time/day);
+        let month=Math.floor(days/31);
+        let years=Math.floor(month/12)
+        let week=Math.floor(days/7)
+        document.getElementById("days").innerText=`${days}`;
+        document.getElementById("month").innerText=`${month}`;
+        document.getElementById("year").innerText=`${years}`;
+        document.getElementById("week").innerText=`${week}`;
+       }
+    </script>
+</body>
+</html> 

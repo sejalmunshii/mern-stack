@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks - Array & Object Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .task-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .task {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .task-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>JavaScript Tasks - Array & Object Methods</h1>
+
+        <h2>Array Methods Tasks</h2>
+        <div class="task-list">
+            <div class="task">1. Create an array `numbers` with values `[5, 10, 15, 20]` and add `25` at the end.</div>
+            <div class="task">2. Remove the last element from the `numbers` array and display the updated array.</div>
+            <div class="task">3. Add `0` at the beginning of the `numbers` array.</div>
+            <div class="task">4. Remove the first element from the `numbers` array and display the updated array.</div>
+            <div class="task">5. Find the index of `15` in the `numbers` array.</div>
+            <div class="task">6. Extract `[200, 300]` from an array `[100, 200, 300, 400, 500]`.</div>
+            <div class="task">7. Remove the third element from `["Red", "Green", "Blue", "Yellow"]`.</div>
+            <div class="task">8. Convert `["JavaScript", "is", "awesome"]` into `"JavaScript is awesome"`.</div>
+            <div class="task">9. Reverse `[9, 8, 7, 6, 5]`.</div>
+            <div class="task">10. Sort `[9, 3, 7, 1, 5]` in ascending order.</div>
+            <div class="task">11. Merge `[1, 2, 3]` and `[4, 5, 6]`.</div>
+            <div class="task">12. Check if all elements in `[2, 4, 6, 8]` are even numbers.</div>
+            <div class="task">13. Check if any number in `[10, 20, 30, 5]` is greater than `25`.</div>
+            <div class="task">14. Replace middle elements with `0` in `[5, 10, 15, 20]`.</div>
+            <div class="task">15. Copy elements within `[1, 2, 3, 4, 5]`.</div>
+        </div>
+
+        <h2>Object Methods Tasks</h2>
+        <div class="task-list">
+            <div class="task">16. Create an object `person` with properties `name`, `age`, and `city`.</div>
+            <div class="task">17. Get all keys from the `person` object.</div>
+            <div class="task">18. Get all values from the `person` object.</div>
+            <div class="task">19. Get all key-value pairs from the `person` object.</div>
+            <div class="task">20. Check if `person` has an `age` property.</div>
+            <div class="task">21. Add a new property `country: "USA"` to the `person` object.</div>
+            <div class="task">22. Delete the `city` property from the `person` object.</div>
+            <div class="task">23. Merge `{ profession: "Engineer" }` into `person`.</div>
+            <div class="task">24. Freeze `person` and try modifying `name`.</div>
+            <div class="task">25. Seal `person` and try adding a new property `hobby`.</div>
+            <div class="task">26. Create an array of objects representing students with properties `name` and `age`.
+            </div>
+            <div class="task">27. Make `age` in `person` read-only.</div>
+            <div class="task">28. List all properties of `person`.</div>
+            <div class="task">29. Check property details of `name` in `person`.</div>
+            <div class="task">30. Print each key and value of `person` separately.</div>
+        </div>
+
+    </div>
+    <script>
+
+        //Array Methods Tasks
+
+        // Create an array `numbers` with values `[5, 10, 15, 20]` and add `25` at the end
+        let app = [5, 10, 15, 50];
+        app.push(25);
+        console.log(app);
+        // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // console.log(fruits);
+
+        const fruits = [1, 2, 3, 4];
+        fruits.push(5, 6);
+
+        // fruits.push("Kiwi");
+        console.log(fruits);
+
+
+        // Remove the last element from the `numbers` array and display the updated array.
+        number.pop();
+        console.log(number);
+        // Add `0` at the beginning of the `numbers` array.
+        number.unshift(0);
+        console.log(number);
+        //Remove the first element from the `numbers` array and display the updated array
+        number.shift();
+        console.log(number);
+        //Find the index of `15` in the `numbers` array.
+        console.log(number.indexOf(15));
+        //. Extract `[200, 300]` from an array `[100, 200, 300, 400, 500]`.
+        let number1 = [100, 200, 300, 400, 500];
+        let number2 = number1.slice(1, 3);
+        console.log(number2);
+        //Remove the third element from `["Red", "Green", "Blue", "Yellow"]
+        element = ["Red", "Green", "Blue", "Yellow"];
+        element.splice(2, 1);
+        console.log(element);
+        //Convert `["JavaScript", "is", "awesome"]` into `"JavaScript is awesome"`.
+        let str = ["JavaScript", "is", "awesome"];
+        let str2 = str.toString();
+        console.log(str2);
+        //Reverse `[9, 8, 7, 6, 5]`
+        let rev = [9, 8, 7, 6, 5];
+        rev.reverse();
+        console.log(rev);
+        //. Sort `[9, 3, 7, 1, 5]` in ascending order.
+        sor = [9, 3, 7, 1, 5];
+        sor.sort();
+        console.log(sor);
+        //Merge `[1, 2, 3]` and `[4, 5, 6]`.
+        let n1 = [1, 2, 3];
+        let n2 = [4, 5, 6];
+        let merg = n1.concat(n2);
+        console.log(merg);
+        //Check if all elements in `[2, 4, 6, 8]` are even numbers.
+        let ele = [2, 4, 6, 8];
+        if (ele[0, 1, 2, 3] % 2 == 0) {
+            console.log("yes all elements are even");
+
+        }
+        else {
+            console.log("no all elements are not even");
+        }
+        //Check if any number in `[10, 20, 30, 5]` is greater than `25`.
+        let great = [10, 20, 30, 5];
+        if (great[0, 1, 2, 3] > 25) {
+            console.log("yes its greater");
+        }
+        else {
+            console.log("no its smaller");
+        }
+        //Replace middle elements with `0` in `[5, 10, 15, 20]`.
+        let mid = [5, 10, 15, 20];
+        mid[2] = 0;
+        console.log(mid);
+        // Copy elements within `[1, 2, 3, 4, 5]`
+        copi = [1, 2, 3, 4, 5];
+        copi.copyWithin(5, 0, 5);
+        console.log(copi);
+
+        //Object Methods Tasks
+        //Create an object `person` with properties `name`, `age`, and `city`.
+        const person = { name: "sejal", age: 23, city: "ahmedabad" };
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.city);
+        //Get all keys-value from the `person` object.
+
+        console.log(Object.entries(person));
+        //Get all keys from the `person` object.\
+        console.log(Object.values(person));
+        //Add a new property `country: "USA"` to the `person` object.
+        person.country = "USA";
+        console.log(person);
+        // Delete the `city` property from the `person` object
+        delete person.age;
+        console.log(person);
+        //Merge `{ profession: "Engineer" }` into `person`.
+        person.proffession = "Engineer";
+        console.log(person);
+        //Freeze `person` and try modifying `name
+        Object.freeze(person);
+        person.city = "jaipur";//it is not changing its value because person have freeze property.
+        console.log(person);
+        //Seal `person` and try adding a new property `hobby
+        Object.seal(person);
+        person.hobby = "dancing";//it will not adding new properties due to person is seal.
+        console.log(person);
+        //Create an array of objects representing students with properties `name` and `age`.
+        const student = { name: "sejal", age: 23 };
+        const arr = [];
+        arr.push(student);
+        console.log(arr);
+        //Make `age` in `person` read-only.
+        const person1 = { name: "sejal", age: 23, city: "ahmedabad" };
+        console.log(person1.age);
+        //Check property details of `name` in `person`.
+        console.log(person1.name);
+        // Print each key and value of `person` separately.
+        console.log(Object.entries(person1));
+    </script>
+
+
+</body>
+
+</html>

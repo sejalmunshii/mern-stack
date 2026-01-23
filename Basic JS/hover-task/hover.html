@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product List Tooltip</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    li {
+      padding: 5px;
+      cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+
+  <h2>Hover Event
+    
+  </h2>
+  <ul id="productList"></ul>
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script>
+    
+    let products = [
+      "X-Stream Audio", "NeoVision Display", "QuantumDrive SSD", "SmartLink Wireless",
+      "EchoSound Speaker", "PixelPro Camera", "UltraPhone 5000", "TechCore Processor",
+      "VisionPro Glasses", "DataVault Hard Drive", "Wi-Fi Connect",
+      "Ambiance Threads", "Evergreen Style", "SilkenEase Fabric", "CityStride Apparel",
+      "Vintage Revival", "ComfortZone Clothing", "UrbanEdge Accessories", "FlowState Activewear",
+      "DreamWeaver Fashion", "StyleShift Collection",
+      "Zesty Bites Snack", "FreshFlow Smoothie", "GoldenGlance Coffee", "BerryBloom Juice",
+      "Creamy Cloud Yogurt", "SavorySpice Seasoning", "Tantalizing Treats Candy",
+      "NutriBoost Bar", "Organic Green Drink", "Sweet Dream Cake",
+      "Solstice Home", "Ethereal Living", "UrbanHaven Decor", "CozyCore Furniture",
+      "ModernTouch Lighting", "Artful Designs", "Comfort Zone Furniture",
+      "Sustainable Living", "Home & Hearth"
+    ];
+    $(document).ready(function () {
+      for (let i = 0; i < products.length; i++) {
+        let full = products[i];
+        let short = full.substring(0, 3) + "...";
+        $('#productList').append(`<li title="${full}">${short}</li>`);
+      }
+    });
+  </script>
+
+  <script>
+    debugger
+
+$(document).ready(function () {
+    // 1. Add Task on Button Click 
+    function addTask() {
+        let taskText = $('#taskInput').val();
+
+        if (taskText !== '') {
+            let newTask = `
+    <li>
+        <span>${taskText}</span>
+        <button class="complete-btn">✔</button>
+        <button class="delete-btn" title="Remove Task">&times;</button>
+    </li>
+               `;
+            $('#taskList').append(newTask);
+            $('#taskInput').val('');
+        }
+    }
+    $('#addTaskBtn').click(function () {
+        addTask();
+    });
+
+    $('#taskList').on('click', '.complete-btn', function () {
+        $(this).parent().toggleClass('completed');
+    });
+    $('#taskList').on('click', '.delete-btn', function () {
+        $(this).parent().remove();
+    });
+    //filters
+    $(".filters button").click(function () {
+        $(".filters button").removeClass("active");
+        $(this).addClass("active");
+
+        let filter = $(this).attr("id");
+
+        $("#taskList li").each(function () {
+            if (filter === "showAll") {
+                $(this).show();
+            } else if (filter === "showCompleted") {
+                $(this).toggle($(this).hasClass("completed"));
+            } else if (filter === "showActive") {
+                $(this).toggle(!$(this).hasClass("completed"));
+            }
+        });
+        $("#clearCompleted").click(function () {
+            $("#taskList li.completed").remove();
+        });
+    });
+
+});
+
+
+
+
+  </script>
+</body>
+</html>

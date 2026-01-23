@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let color=prompt("Enter signal color[red,green,orange]");
+
+        switch(color){
+            case "red":
+                document.writeln("Stop");
+                break;
+            case "orange":
+                document.writln("wait");
+                break;
+            case "green":
+                document.writeln("go");
+            default:
+                document.writeln("wrong color");
+        }
+    </script>
+</body>
+</html>

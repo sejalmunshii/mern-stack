@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex{
+            display: flex;
+        }
+        
+    </style>
+</head>
+<body>
+    <table></table>
+    <form>
+        <h1>MAth Operation</h1>
+        <label for="index1">Enter 1st Number</label>
+        <input type="text" name="index1" id="num1"><br>
+
+        <label for="index2">Enter 2nd Number</label>
+        <input type="text" name="index2" id="num2">    
+    </form>
+    <div class="flex">
+        <div class="button">
+        <button id="btn1" onclick="calculate('+')">+</button>
+        <button id="btn1" onclick="calculate('-')">-</button>
+        <button id="btn1" onclick="calculate('*')">*</button>
+        <button id="btn1" onclick="calculate('/')">/</button>
+        <button id="btn1" onclick="calculate('%')">%</button>
+        </div>
+    </div>
+     <div class="result">
+      Answer is: <span id="result">0</span>
+    </div>
+    </div>
+
+<script>
+
+    function calculate(operator){
+         const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      let result = 0;
+      
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Please enter both numbers!");
+        return;
+      }
+
+      switch (operator) {
+        case '+': result = num1 + num2; break;
+        case '-': result = num1 - num2; break;
+        case '*': result = num1 * num2; break;
+        case '/': 
+          result = num2 !== 0 ? num1 / num2 : 'Infinity';
+          break;
+        case '%': 
+          result = num2 !== 0 ? num1 % num2 : 'NaN';
+          break;
+      }
+
+      document.getElementById('result').textContent = result;
+    }
+
+
+    
+    
+</script>
+    
+</body>
+</html>

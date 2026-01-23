@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Marks With Switch</h1>
+
+    <script>
+
+        let hindi=prompt("enter your marks in hindi");
+        let english=prompt("enter your marks in english");
+        let maths=prompt("enter your marks in maths");
+        let computer=prompt("enter your marks in computer");
+
+        let total=parseFloat(hindi)+parseFloat(english)+parseFloat(maths)+parseFloat(computer);
+        let grade = (total/400)*100;
+         document.writeln("your Total marks is" + " " +  total);
+         document.writeln("you got" + " "+ grade + "%");
+
+        switch(true){
+            case (grade >= 90):
+            document.writeln(" first class");
+            break;
+             case (grade >= 70):
+            document.writeln(" second class");
+            break;
+             case (grade >= 50 ):
+            document.writeln(" third class");
+            break;
+             case (grade >= 33):
+            document.writeln(" okok class");
+            break;
+            default:
+                document.writeln("fail");
+        }
+
+
+
+    </script>
+</body>
+</html>

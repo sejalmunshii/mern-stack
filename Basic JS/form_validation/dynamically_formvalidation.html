@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td >
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" id="fname" class="parent" placeholder="Enter First Name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" id="lname" class="parent" placeholder="Enter last Name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="pass">Password</label>
+                <input type="text" id="pass" class="parent" name="pass" placeholder="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="parent" id="email" class="" placeholder="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone" class="parent" placeholder="Enter Phone number">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="submit">
+            </td>
+        </tr>
+    </table>
+
+
+
+    <script>
+
+        let classy=document.getElementsByClassName('parent')
+
+        window.addEventListener('click',function (e) {
+
+        let fname=document.getElementById('fname');
+        let lname=document.getElementById('lname');
+        let pass=document.getElementById('pass');
+        let email=document.getElementById('email');
+        let phone=document.getElementById('phone');
+
+        if(fname.value ==""){
+            let div=document.querySelector('#fname');
+         let newSpan=document.createElement('span');
+         newSpan.textContent="this is required";
+         console.log(newSpan);
+         
+         div.appendChild( newSpan)
+         div.insertAdjacentElement('afterend',newSpan);
+           
+        }
+        else{
+             let div=document.querySelector('#fname');
+         let newSpan=document.createElement('span');
+         newSpan.textContent="";
+         console.log(newSpan);
+         
+         div.appendChild( newSpan);
+         div.insertAdjacentElement('afterend',newSpan);
+        }
+        
+          if(lname.value ==""){
+            let div=document.querySelector('#lname');
+         let newSpan1=document.createElement('span');
+         newSpan1.textContent="this is required";
+         console.log(newSpan1);
+         
+         div.appendChild( newSpan1)
+         div.insertAdjacentElement('afterend',newSpan1);
+           
+        }
+        else{
+             let div=document.querySelector('#lname');
+         let newSpan1=document.createElement('span');
+         newSpan.textContent="";
+         console.log(newSpan1);
+         
+         div.appendChild( newSpan1)
+         div.insertAdjacentElement('afterend',newSpan1);
+        }
+          });
+
+
+          
+        
+    </script>
+</body>
+
+</html>
