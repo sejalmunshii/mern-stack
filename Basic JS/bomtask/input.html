@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <!-- <input type="password" name="password" id="password" />
+      <span onclick="showpwd(this)">Show</span> -->
+      <input type="password" name="password" id="password" />
+      <span id="showpwd">Show</span>
+    </form>
+    <script>
+      document.getElementById("showpwd").addEventListener("click", function () {
+        //   console.log("called");
+        //   console.log(this);
+        //   console.log(event);
+        //   console.log(data);
+        console.log(this.innerHTML);
+        if (this.innerHTML == 'Show') {
+            // console.log("Inside if");
+            this.innerHTML="Hide"
+            document.getElementById("password").type="text";
+           // document.getElementById("disp").innerHTML=document.getElementById("password").value
+    
+        } else {
+            // console.log("Inside else");
+           
+            this.innerHTML="Show";
+            document.getElementById("password").type="password";
+        }
+        });
+    //   function showpwd(anything) {
+    //     console.log(this);
+    //     console.log(anything);
+    //   }
+    </script>
+  </body>
+</html>

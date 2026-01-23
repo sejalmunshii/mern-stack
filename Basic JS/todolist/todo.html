@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery To-Do List</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My To-Do List</h1>
+
+        <div class="add-task">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <ul id="taskList">
+            </ul>
+
+        <div class="filters">
+            <button id="showAll" class="active">All</button>
+            <button id="showActive">Active</button>
+            <button id="showCompleted">Completed</button>
+        </div>
+
+        <button id="clearCompleted">Clear Completed</button>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+    
+    <script>
+
+$(document).ready(function () {
+    // 1. Add Task on Button Click 
+    function addTask() {
+        let taskText = $('#taskInput').val();
+
+        if (taskText !== '') {
+            let newTask = `
+    <li>
+        <span>${taskText}</span>
+        <button class="complete-btn">✔</button>
+        <button class="delete-btn" title="Remove Task">&times;</button>
+    </li>
+               `;
+            $('#taskList').append(newTask);
+            $('#taskInput').val('');
+        }
+    }
+    $('#addTaskBtn').click(function () {
+        addTask();
+    });
+
+    $('#taskList').on('click', '.complete-btn', function () {
+        $(this).parent().toggleClass('completed');
+    });
+    $('#taskList').on('click', '.delete-btn', function () {
+        $(this).parent().remove();
+    });
+    //filters
+    $(".filters button").click(function () {
+        $(".filters button").removeClass("active");
+        $(this).addClass("active");
+
+        let filter = $(this).attr("id");
+
+        $("#taskList li").each(function () {
+            if (filter === "showAll") {
+                $(this).show();
+            } else if (filter === "showCompleted") {
+                $(this).toggle($(this).hasClass("completed"));
+            } else if (filter === "showActive") {
+                $(this).toggle(!$(this).hasClass("completed"));
+            }
+        });
+        $("#clearCompleted").click(function () {
+            $("#taskList li.completed").remove();
+        });
+    });
+
+});
+    </script>
+</body>
+</html>

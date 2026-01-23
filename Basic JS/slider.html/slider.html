@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .mycontainer {
+            margin: auto;
+            position: relative;
+        }
+        .numbers {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="mycontainer">
+        <div class="slides fade">
+            <div class="numbers">1/3</div>
+            <img src="../slider.html/img/img_mountains_wide.jpg" alt="" width="100%">
+            <div class="text">caption one</div>
+        </div>
+        <div class="slides fade">
+            <div class="numbers">2/3</div>
+            <img src="../slider.html/img/img_nature_wide.jpg" alt="" width="100%">
+            <div class="text">caption two</div>
+        </div>
+        <div class="slides fade">
+            <div class="numbers">3/3</div>
+            <img src="../slider.html/img/img_snow_wide.jpg" alt="" width="100%">
+            <div class="text">caption three</div>
+        </div>
+    </div>
+    <script>
+        let count = 0;
+        function slider() {
+            debugger
+            let a;
+            let slide = document.getElementsByClassName("slides");
+            for (a = 0; a < slide.length; a++) {
+                slide[a].style.display = "none";
+            }
+            if (count >=slide.length) {
+                count = 0
+            }
+            slide[count].style.display = "block";
+            count++;
+            setTimeout(slider, 2000);
+        }
+        slider()
+    </script>
+</body>
+</html>

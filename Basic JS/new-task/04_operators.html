@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Operators Task</h1>
+    <script>
+        document.writeln("<h1>1. Arithmetic Operators Tasks</h1>")
+        //1. Add two numbers using + and display the result
+
+        let num1 = 10;
+        let num2 = 2;
+
+        document.writeln(num1 + "+" + num2 + "=" + (num1 + num2) + "<br>");
+        document.writeln(num1 + "-" + num2 + "=" + (num1 - num2) + "<br>");
+        document.writeln(num1 + "*" + num2 + "=" + (num1 * num2) + "<br>");
+        document.writeln(num1 + "/" + num2 + "=" + (num1 / num2) + "<br>");
+        document.writeln(num1 + "%" + num2 + "=" + (num1 % num2) + "<br>");
+        document.writeln(num1 + "increament is" + (++num1) + "<br>");
+        document.writeln(num1 + "decreament is" + (--num1) + "<br>");
+
+        // Chain multiple arithmetic operations with brackets.
+        document.writeln(`addition=${num1 + num2}subtraction=${num1 - num2}multiplication=${num1 * num2}division${num1 / num2}modulus${num1 % num2}pre-increament${++num1}pre-decrement${--num1}<br>`);
+
+        //Combine arithmetic with user input (prompt).
+
+        //  let number1=parseFloat(prompt("enter number 1"));
+        //  let number2=parseFloat(prompt("enter second number"));
+        //  let operator=prompt("enter operator [+,-,*,/,%]");
+
+        //  switch(operator){
+
+        // case "+":
+        //     document.writeln(number1+"+"+number2+"="+(number1+number2));
+        //     break;
+        //     case "-":
+        //     document.writeln(number1+"-"+number2+"="+(number1-number2));
+        //     break;
+        //     case "+":
+        //     document.writeln(number1+"*"+number2+"="+(number1*number2));
+        //     break;
+        //     case "+":
+        //     document.writeln(number1+"/"+number2+"="+(number1/number2));
+        //     break;
+        //     case "+":
+        //     document.writeln(number1+"%"+number2+"="+(number1%number2));
+        //     break;
+        //     default:
+        //         document.writeln("invalid operator");
+        //  }
+
+        //Calculate area and perimeter of a rectangle using operators.
+        let length = 20;
+        let width = 2;
+        let areaOfrectangle = length * width;
+        let perimeter = (length + width) * 2;
+        document.writeln("Area of Rectangle is" + areaOfrectangle + "<br>");
+        document.writeln("Perimeter of Rectangle is" + perimeter + "<br>");
+
+        document.writeln("<h1>2. Assignment Operators Tasks</h1>")
+        // Assign a value to a variable with =.
+
+        let num;
+        num = 2;
+        document.writeln(num + "<br>");
+        // Increase a value by 10 using +=.
+
+        num += 10;
+        document.writeln(num + "<br>");
+
+        //Reduce a value using -=
+        num -= 10;
+        document.writeln(num + "<br>");
+
+        //Multiply and reassign using *=.
+        num *= 10;
+        document.writeln(num + "<br>");
+        //Divide and reassign using /=
+        num /= 10;
+        document.writeln(num + "<br>");
+        //Use modulus assignment %=.
+        num %= 10;
+        document.writeln(num + "<br>");
+        //Use exponentiation assignment **=.
+        num **= 10;
+        document.writeln(num + "<br>");
+        //Chain multiple assignment operators
+        num = 10 !=10;
+        document.writeln(num + "<br>");
+        //Display results at each step to observe the changes.
+        num = 10 + 2;
+        document.writeln(num + "<br>");
+        num -= 2;
+        document.writeln(num + "<br>");
+        num *= 3;
+        document.writeln(num + "<br>");
+        num /= 4;
+        document.writeln(num + "<br>");
+        document.writeln("<h1>3. Comparison Operators Tasks</h1>")
+        //Compare two numbers using == and ===
+
+        let a = 2;
+        let b = 3;
+        if (a == b) {
+            document.writeln("equal<br>");
+        }
+        else {
+            document.writeln("not equal<br>")
+        }
+
+        //Compare a string and a number using ==
+
+        let str = "2";
+        let number = 2;
+        if (str == number) {
+            document.writeln("equal<br>");
+        }
+        else {
+            document.writeln("not equal<br>")
+        }
+
+        //Use !== to check strict inequality.
+        let str1 = "2";
+        let number1 = 2;
+        if (str1 !== number1) {
+            document.writeln("not equal<br>");
+        }
+        else {
+            document.writeln("equal<br>")
+        }
+
+        //Use > and < between variables.
+        let n1 = 3;
+        let n2 = 2;
+        if (n1 > n2) {
+            document.writeln(n1 + "is greater than" + n2 + "<br>");
+        }
+        else {
+            document.writeln(n2 + "is greater than" + n1 + "<br>");
+        }
+
+        //Create a grading system using >=, <=
+        let hindi = 34;
+        let english = 45;
+        let maths = 65;
+        let computer = 54;
+
+        let marks = (parseFloat(hindi) + parseFloat(english) + parseFloat(maths) + parseFloat(computer));
+        let grade = (marks / 400) * 100;
+        console.log(grade);
+
+        if (hindi > 100) {
+            document.writeln("write correct marks for hindi");
+        }
+        else if (english > 100) {
+            document.writeln("write correct marks for english");
+        }
+        else if (maths > 100) {
+            document.writeln("write correct marks for maths");
+        }
+        else if (computer > 100) {
+            document.writeln("write correct marks for computer");
+        }
+        else if (grade <= 100 && grade > 80) {
+            document.writeln("Congratulation you have pass at distinction class");
+            document.writeln("your total percentage is" + " ", grade, "%");
+        }
+        else if (grade <= 80 && grade > 75) {
+            document.writeln("Congratulation you have pass at first class");
+            document.writeln("your total percentage is" + " ", grade, "%<br>");
+        }
+        else if (grade <= 75 && grade > 50) {
+            document.writeln("Congratulation you have pass at second class");
+            document.writeln("your total percentage is" + " ", grade, "%<br>");
+        }
+        else if (grade <= 50 && grade >= 33) {
+            document.writeln("Congratulation you have pass at third class");
+            document.writeln("your total percentage is" + " ", grade, "%<br>");
+        }
+        else {
+            document.writeln("fail!! Try again");
+            document.writeln("your total percentage is" + " ", grade, "%<br>");
+        }
+        //Compare strings (e.g., "apple" > "banana").
+        let fruit1 = "banana";
+        let fruit2 = "apple";
+
+        if (fruit1 > fruit2) {
+            document.writeln(fruit1 + "if greater than" + fruit2);
+        }
+        else {
+            document.writeln(fruit2 + "is greater than" + fruit1);
+        }
+
+        //Use comparison inside a loop (e.g., i < 5).
+        for (let i = 0; i <= 5; i++){
+            document.writeln(i + "<br>");
+        }
+        //Create a login check (username === "admin").
+        let username = "someone";
+        let admin = "sejal";
+
+        
+
+        if (username === "admin") {
+            document.writeln("Login successful.<br>");
+        } else {
+            document.writeln("Login failed.<br>");
+        }
+
+        document.writeln("<h1>4. Logical Operators Tasks</h1>")
+        //Use && to check if age is between 18 and 60.
+
+        let age = 45;
+        if (age >= 18 && age <= 60) {
+            document.writeln("you are an adult<br>");
+        }
+        else {
+            document.writeln("not an adult<br>")
+        }
+
+        //Use || to check if user is admin or manager.
+        let user = "someone"
+        let admin1 = "sejal";
+        let manager = "someone";
+
+        if (admin == user || manager == user) {
+            document.writeln("you can logged in <br>");
+        }
+        else {
+            document.writeln("you can not logged in <br>");
+        }
+
+        //Use ! to invert a boolean
+        let bool = true;
+        document.writeln(!bool + "<br>");
+
+        //Use logical operators in if statements.
+        //Combine logical operators in a complex condition
+
+        let hindi1 = 98;
+        let english1 = 55;
+        let maths1 = 76;
+        let computer1 = 74;
+
+        let marks1 = (parseFloat(hindi) + parseFloat(english) + parseFloat(maths) + parseFloat(computer));
+        let grade1 = (marks / 400) * 100;
+        console.log(grade);
+
+
+        if (grade1 <= 100 && grade1 > 80) {
+            document.writeln("Congratulation you have pass at distinction class");
+            document.writeln("your total percentage is" + " ", grade1, "%");
+        }
+        else if (grade1 <= 80 && grade1 > 75) {
+            document.writeln("Congratulation you have pass at first class");
+            document.writeln("your total percentage is" + " ", grade1, "%<br>");
+        }
+        else if (grade1 <= 75 && grade1 > 50) {
+            document.writeln("Congratulation you have pass at second class");
+            document.writeln("your total percentage is" + " ", grade1, "%<br>");
+        }
+        else if (grade1 <= 50 && grade1 >= 33) {
+            document.writeln("Congratulation you have pass at third class");
+            document.writeln("your total percentage is" + " ", grade1, "%<br>");
+        }
+        else {
+            document.writeln("fail!! Try again");
+            document.writeln("your total percentage is" + " ", grade1, "%<br>");
+        }
+
+        //Use ! with falsy values (!0, !null, etc.).
+
+        let variable = "";
+        document.writeln(!variable);
+
+        document.writeln("<h1>6. String Operators Tasks</h1>")
+
+        //Concatenate two strings using +
+
+        let fname = "sejal";
+        let sname = "munshi";
+
+        document.writeln(fname + sname + "<br>");
+
+        //Append strings using +=.
+
+        fname += "munshi";
+        document.writeln(fname + "<br>");
+
+        //Combine strings and numbers.
+
+        fname += 23;
+        document.writeln(fname + "<br>");
+
+        //Use template literals instead of +.
+        document.writeln(`${fname}${sname}<br>`);
+
+        //Concatenate multiple values in a single line.
+        //Build a sentence from variables.
+        let userN = "sejal";
+        let userA = 23;
+        let islogged = "loggedin";
+
+        document.writeln("hello im" + " " + userN + "im" + userA + "im" + islogged + "<br>");
+        //Show difference between number addition and string concatenation (1 + "2").
+
+        let n = 1;
+        let s = "2";
+        document.writeln(n + s + "<br>");
+
+        //Create a welcome message using variables.
+        let msg1 = "hello";
+        let msg2 = "wellcome";
+        let msg3 = "to";
+        let msg4 = "frameboxx";
+        document.writeln(msg1 + " " + " " + msg2 + "" + " " + msg3 + " " + msg4 + "<br>");
+
+        //Practice using backticks and ${}.
+        document.writeln(`${fname}${sname}<br>`);
+
+        //Convert number to string before concatenation.
+        n = n.toString();
+        document.writeln(n + s + "<br>");
+
+        document.writeln("<h1>7. Conditional (Ternary) Operator Tasks</h1>")
+
+        //Use ternary to check if a number is even or odd.
+        let evn = 2;
+        let ans = (evn % 2 == 0 + "<br>") ? document.writeln("number is even" + "<br>") : document.writeln("number is odd" + "<br>");
+
+        //Use ternary to display login status.
+        let employee = true;
+
+        let status = (employee == true) ? document.write("logged in<br>") : document.writeln("not loggedin <br>");
+
+        //Nest ternary operators for multiple conditions.
+        let score = 75;
+        let result = score > 90 ? "Excellent" : score > 70 ? "Good" : score > 50 ? "Average" : "Poor";
+        document.writeln(result + "<br>");
+
+        //Use ternary for age group: child/adult/senior.
+
+        let a_ge = 23;
+
+        let current_age = (a_ge > 65) ? "senior citizen" : a_ge > 18 ? "teenager" : age > 0 ? "child" : "invalid";
+        document.writeln(current_age);
+
+        document.writeln("<h1>8. Type Operators Tasks </h1>")
+        // Use typeof to log the type of a string, number, boolean, null, undefined, etc
+
+        let value1 = 12;
+        let value2 = "hello";
+        let value3 = true;
+        let value4 = null;
+        let value5;
+        document.writeln(typeof (value1));
+        document.writeln(typeof (value2));
+        document.writeln(typeof (value3));
+        document.writeln(typeof (value4));
+        document.writeln(typeof (value5) + "<br>");
+
+        //Check if a variable is a function.
+
+        function name() {
+            let a = 2;
+            document.writeln(a);
+        }
+        document.writeln(name()+ "<br>");
+        document.writeln(typeof (name)+ "<br>");
+
+        //Create a function that logs type of any input.
+        function anything() {
+            let a = 2;
+            document.writeln(typeof(a)+ "<br>");
+        }
+        document.writeln(anything()+ "<br>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

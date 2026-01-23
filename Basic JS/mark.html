@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let hindi= prompt ("Enter your marks in Hindi");
+        let english= prompt ("Enter your marks in english");
+        let maths=prompt ("Enter your marks in maths");
+        let computer=prompt("Enter your marks in computer");
+                
+                let marks =(parseFloat(hindi)+parseFloat(english)+parseFloat(maths)+parseFloat(computer));
+                let grade=(marks/400)*100;
+                console.log(grade);
+
+                if(hindi>100){
+                    document.writeln("write correct marks for hindi");
+                }
+                else if(english>100){
+                    document.writeln("write correct marks for english");
+                }
+                else if(maths>100){
+                    document.writeln("write correct marks for maths");
+                }
+                else if(computer>100){
+                    document.writeln("write correct marks for computer");
+                }
+                else if(grade <=100 && grade >80){
+                    document.writeln("Congratulation you have pass at distinction class");
+                    document.writeln("your total percentage is" + " ",grade,"%");
+                }
+                 else if(grade <=80 && grade >75){
+                    document.writeln("Congratulation you have pass at first class");
+                    document.writeln("your total percentage is" + " ",grade,"%");
+                }
+                 else if(grade <=75 && grade >50){
+                    document.writeln("Congratulation you have pass at second class");
+                    document.writeln("your total percentage is" + " ",grade,"%");
+                }
+                 else if(grade <=50 && grade >=33){
+                    document.writeln("Congratulation you have pass at third class");
+                    document.writeln("your total percentage is" + " ",grade,"%");
+                }
+                 else{
+                    document.writeln("fail!! Try again");
+                    document.writeln("your total percentage is" + " ",grade,"%");
+                }
+    </script>
+</body>
+</html>

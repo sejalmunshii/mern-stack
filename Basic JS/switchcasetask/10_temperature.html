@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let temp=parseFloat(prompt("enter temperature[0-100]"));
+        switch(true){
+            case (temp <=30):
+                document.writeln("cold");
+                break;
+                case(temp >30  && temp <=45):
+                document.writeln("hot");
+                break;
+                case(temp >45 && temp <=100):
+                document.writeln("very hot");
+                break;
+                default:
+                    document.writeln("snowwwww");
+        }
+
+
+    </script>
+</body>
+</html>

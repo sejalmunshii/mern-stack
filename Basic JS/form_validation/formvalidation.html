@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FORM VALIDATION  </h1>
+
+    <form>
+        <label for="fname">Enter First Name</label>
+        <input type="text" name="fname" placeholder="" onblur="validation()"  id="fname"><span id="msg"></span><br>
+        <label for="lname">Enter last Name</label>
+        <input type="text" name="lname" placeholder=""  id="lname"><span id="msg"></span><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder=""  id="password"><span id="msg"></span> <br>
+        <label for="email">Enter Email</label>
+        <input type="email" name="email" placeholder="" id="email"><br><span id="msg"></span><br>
+    </form>
+    <script>
+
+        let firstname=document.getElementById("fname");
+        let lname=document.getElementById("lname");
+        let password=document.getElementById("fname");
+        let email=document.getElementById("fname");
+        //let fname=document.getElementById("fname").value;
+            function fname(){
+            if(firstname.value.trim() == ""){
+                document.getElementById("msg").innerText="this field is required";
+                console.log("empty")
+            }
+            else{
+                 document.getElementById("msg").innerText=" ";
+                 console.log("nothing")
+             } 
+        }
+        let validation=addEventListener("input",fname);
+    </script>
+</body>
+</html>

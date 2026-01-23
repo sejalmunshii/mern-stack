@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .task-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007BFF;
+        }
+        ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Practical Tasks</h1>
+        
+        <div class="task-section">
+            <h2>String Methods Tasks</h2>
+            <ul>
+                <li>Reverse a string and display the output.</li>
+                <li>Count the number of vowels in a given string.</li>
+                <li>Check if a given string is a palindrome.</li>
+                <li>Extract the first 5 characters from a string.</li>
+                <li>Convert the first letter of each word in a string to uppercase.</li>
+                <li>Find the longest word in a sentence.</li>
+                <li>Replace the word "bad" with "good" in a given sentence.</li>
+                <li>Remove extra spaces from a string.</li>
+                <li>Count how many times a specific character appears in a string.</li>
+                <li>Convert a string into an array of words.</li>
+            </ul>
+        </div>
+        
+        <div class="task-section">
+            <h2>Math Methods Tasks</h2>
+            <ul>
+                <li>Generate a random number between 1 and 100.</li>
+                <li>Round a decimal number to the nearest integer.</li>
+                <li>Find the square root of a given number.</li>
+                <li>Get the absolute value of a negative number.</li>
+                <li>Find the maximum and minimum values from a set of numbers.</li>
+                <li>Calculate 2 raised to the power of 5.</li>
+                <li>Generate a random integer between 50 and 150.</li>
+                <li>Get the floor value of 9.7.</li>
+                <li>Get the ceiling value of 4.3.</li>
+                <li>Find the remainder when 25 is divided by 4.</li>
+            </ul>
+        </div>
+        
+        <div class="task-section">
+            <h2>Number Methods Tasks</h2>
+            <ul>
+                <li>Convert the string "123" into a number.</li>
+                <li>Convert the number 456 into a string.</li>
+                <li>Convert the decimal number 9.8765 to 2 decimal places.</li>
+                <li>Check if the value "50" is an integer.</li>
+                <li>Convert the number 255 to its hexadecimal form.</li>
+                <li>Convert 0.1 + 0.2 to a fixed decimal format with 1 decimal place.</li>
+                <li>Find if "hello" is a valid number or not.</li>
+                <li>Convert the number 1e6 into a regular number format.</li>
+                <li>Parse the string "45.67px" and extract the numeric value.</li>
+                <li>Convert the binary number "1101" into a decimal number.</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script>
+
+ //String Methods Tasks.
+
+
+ //Reverse a string and display the output.
+ let name = ["sejal", "munshi"];
+ let reverse = name.reverse();
+ console.log(reverse);
+
+ //Count the number of vowels in a given string.
+ 
+
+
+ //Check if a given string is a palindrome.
+
+
+ //Extract the first 5 characters from a string.
+ let word = "sentence";
+ let five = word.substring(0, 5);
+
+console.log(five);
+//Find the longest word in a sentence.
+
+
+//Replace the word "bad" with "good" in a given sentence.
+
+
+//Convert a string into an array of words.
+let str = "this is a string";
+let ar = str.split(" ");
+
+console.log(ar);
+
+
+//Math Methods Tasks
+
+
+//Generate a random number between 1 and 100.
+let random= Math.floor(Math.random() * 100)+1;
+console.log(random);
+
+
+//Round a decimal number to the nearest integer.
+let num1 = 2.6;
+let roundedNum1 = Math.round(num1); 
+console.log(roundedNum1);
+
+//Find the square root of a given number.
+let num = 25;
+let sqrt = eval('Math.pow(' + num + ', 0.5)');
+console.log(sqrt);
+
+//Get the absolute value of a negative number.
+
+let  negativeNumber = -2;
+let absoluteValue = Math.abs(negativeNumber);
+
+console.log(absoluteValue); 
+
+//Find the maximum and minimum values from a set of numbers
+let numbers = [5, 2, 9, 1, 5, 6];
+
+let max = Math.max(...numbers);
+let min = Math.min(...numbers);
+
+console.log("Maximum value:", max);
+console.log("Minimum value:", min);
+
+
+//Calculate 2 raised to the power of 5.
+let b = Math.pow(2, 5);
+console.log(b)
+
+//Generate a random integer between 50 and 150.
+let ran= Math.floor(Math.random() * 101)+50;
+console.log(ran);
+
+//Get the floor value of 9.7
+let m=Math.floor(9.7);
+console.log(m);
+
+//Get the ceiling value of 4.3
+let number = 4.3;
+let ceiling= Math.ceil(number);
+console.log(ceiling);
+
+//Find the remainder when 25 is divided by 4.
+
+let x= 25;
+let  y= 4;
+let remainder = x % y;
+console.log(remainder); 
+
+
+//Number Methods Tasks
+//Convert the string "123" into a number.
+let stringNumber = "123";
+let number1 = parseInt(stringNumber, 10); 
+console.log(number1);
+
+//Convert the number 456 into a string.
+let con=321;
+let strn = con.toString();
+console.log(strn);
+//console.log(typeof strn);
+
+//Convert the decimal number 9.8765 to 2 decimal places
+let decimal = 9.8765;
+let rounded = decimal.toFixed(2);
+
+console.log(rounded);
+
+//Check if the value "50" is an integer.
+a=Number.isInteger(50);
+console.log(a);
+
+//Convert the number 255 to its hexadecimal form.
+let deci= 255;
+let hexadeci= deci.toString(16);
+console.log(hexadeci);
+
+//Convert 0.1 + 0.2 to a fixed decimal format with 1 decimal place.
+let r = 0.1 + 0.2;
+let result = r.toFixed(1);
+
+console.log(result); 
+//console.log(typeof result);
+
+//Find if "hello" is a valid number or not.
+let value = "hello";
+let l = !(isNaN(+value));
+
+if (l) {
+  console.log("Value is a number") ;
+} else {
+  console.log( "Value is not a number");
+}
+
+//Convert the number 1e6 into a regular number format
+let v = 1e6;
+console.log(v);
+
+//Parse the string "45.67" and extract the numeric value
+const st = "45.67";
+const nu = parseFloat(st);
+console.log(nu);
+//console.log(typeof nu); 
+
+//Convert the binary number "1101" into a decimal number.
+let binary= "1101";
+let decimalNumber = parseInt(binary, 2);
+
+console.log(decimalNumber);
+
+    </script>
+</body>
+</html>
