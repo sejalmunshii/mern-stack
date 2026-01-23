@@ -1,0 +1,114 @@
+/* LIGHT MODE */
+body.light {
+  --bg: #ffffff;
+  --text: #000000;
+  --nav: #f8f9fa;
+
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --list-bg: #ffffff;
+  --list-border: #e5e7eb;
+  --muted-text: #6b7280;
+  --primary: #0d6efd;
+}
+
+/* DARK MODE */
+body.dark {
+  --bg: #0f172a;
+  --text: #ffffff;
+  --nav: #111827;
+
+  --card-bg: #111827;
+  --card-border: #263a4e;
+  --list-bg: #020617;
+  --list-border: #374151;
+  --muted-text: #9ca3af;
+  --primary: #8f8cf6;
+}
+
+/* BODY THEME */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+/* NAVBAR */
+.nav-theme {
+  background-color: var(--nav) !important;
+  border-bottom: 1px solid var(--card-border);
+}
+
+/* CARD */
+.card,
+.shadow,
+.shadow-sm,
+.shadow-lg {
+  background-color: var(--card-bg) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--card-border) !important;
+}
+
+/* LIST GROUP */
+.list-group-item {
+  background-color: var(--list-bg) !important;
+  color: var(--text) !important;
+  border-color: var(--list-border) !important;
+}
+
+/* TEXT COLORS */
+.text-muted,
+.text-secondary {
+  color: var(--muted-text) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text) !important;
+}
+
+/* BUTTON */
+.btn-outline-secondary {
+  color: var(--text);
+  border-color: var(--muted-text);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--list-border);
+  color: var(--text);
+}
+
+/* FORM INPUT */
+input,
+textarea,
+select {
+  background-color: var(--list-bg) !important;
+  color: var(--text) !important;
+  border-color: var(--list-border) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted-text) !important;
+}
+
+/* LINKS */
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* SMOOTH THEME ANIMATION */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
