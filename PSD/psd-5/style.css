@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#section-1{
+    background-image: url(../image/background-1.png);
+    background-size: cover;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.row{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    padding: 10px;
+}
+.nav-menu ul{
+    margin-left: 50px;
+}
+.nav-menu li{
+    list-style: none;
+}
+.nav-menu a{
+    text-decoration: none;
+    padding-left: 20px;
+    color: aliceblue;
+    font-family: sans-serif;
+}
+.col-1 h1{
+    color: aliceblue;
+    height: 100px;
+    font-size: 40px;
+    padding-top: 20px;
+    font-family: sans-serif;
+}
+.col-1 p{
+    width: 60%;
+    color: aliceblue;
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+.col-1 button{
+    width: 200px;
+    height: 40px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 33.33px;
+    margin-bottom: 50px;
+}
+#section-2{
+    background-color:#222222;
+}
+.heading h1{
+   color: aliceblue;
+   text-align: center;
+   font-size: 30px;
+   padding-top: 20px;
+}
+.heading p{
+    color: aliceblue;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 19px;
+}
+.col-2{
+    width: 33.33%;
+}
+.col-2 h2{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    color: aliceblue;
+}
+.col-2 img{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.col-2 p{
+    color: aliceblue;
+    font-size: 20px;
+    padding: 20px;
+    padding-bottom: 50px;
+
+}
+#section-3{
+    background-image: url(../image/bg-section03.png);
+    background-size:cover ;
+    height: 500px;
+
+
+}
+.col-3{
+    width: 50%;
+    margin-top: 80px;  
+  
+}
+.col-3 h1{
+    color: aliceblue;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+}
+.col-3 p{
+    color: aliceblue;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+.col-3 button{
+    width: 200px;
+    height: 30px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 33px;
+    margin: 30px;
+}
+#section-4{
+    background-color: #222222;
+}
+.col-4{
+    width: 250px;
+    height: 250px;
+    border-radius: 138px;
+    border: 5px solid #ffffff;
+    margin: 30px;
+}
+.col-4 h1{
+    color: #ffffff;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 50px;
+}
+.col-4 h2{
+    color: #ffffff;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 2px;
+}
+#section-5{
+    background-image: url(../image/bg-img-section04.png);
+    background-size: cover;
+    height: 600px;
+
+}
+.col-5{
+    width: 50%;
+    margin-top: 70px;
+}
+.col-5 h1{
+    font-size: 40px;
+    color: #ffffff;
+    padding-top: 30px;
+}
+.col-5 p{
+    font-size: 20px;
+    color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.col-5 button{
+    width: 100px;
+    height: 40px;
+    background-color:white ;
+    color: black;
+    border-radius: 33px;
+    margin-top: 20px;
+}
+#section-6{
+    background-image: url(../image/bg-section-5.png);
+    background-size:cover ;
+    height: 600px;
+}
+.col-6{
+    width: 100%;
+    margin-top: 90px;
+}
+.col-6 p{
+    color: #ffffff;
+    font-size: 40px;
+    padding-top: 90px;
+
+}
+#section-7{
+    background-color: #222222;
+    height: 300px;
+}
+.col-7{
+    width: 100%;
+
+}
+.col-7 h1{
+    color: #ffffff;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px;
+}
+.col-7 p{
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 30px;
+}
+.col-7 input{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    margin-left: 70px;
+    margin-top: 30px;
+
+}
+
+#footer{
+    background-color: black;
+}
+.col-10
+{
+    width: 25%;
+    padding-bottom: 30px;
+}
+.col-10 li{
+    list-style: none;
+}
+.col-10 h1{
+    color: white;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+.col-10 p{
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+#footer h2{
+    color:white;
+    font-size: 20px;
+    padding-top: 50px;
+    text-align: left;
+}
+.col-10 a,i{
+    color: white;
+    margin-left: 10px;
+}
+.col-10 h2,h3{
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+@media screen(){
+    
+}

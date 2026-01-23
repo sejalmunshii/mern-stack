@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  .contioner {
+    width: 1200px;
+    /* background-color: blue; */
+    /* color: white; */
+    /* height: 800px; */
+    margin: 0 auto;
+  }
+  .col-30 {
+    width: 30%;
+    margin: 0 auto;
+  }
+  .col-50{
+      width: 50%;
+      margin: 0 auto  ;
+  }
+  /* li{
+      display: inline-block;
+  } */
+  .m-0 {
+    margin: 0 auto;
+  }
+  .bg-color {
+    background-color: #000000a0;
+  }
+  .d-flex {
+    display: flex;
+  }
+  .list-none li,.list-none a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+
+  }
+  .jsc {
+    justify-content: space-between;
+  }
+  .jsb{
+      justify-content: space-between;
+  }
+  .alc {
+    align-items: center;
+  }
+  
+ 
+  /* ----------------------------------------section-one---------------------------- */
+  .logo{
+    margin-top: 30px;
+  }
+  .sec-one {
+    background-image: url(../image/Sec-one-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .sec-one-text h1,
+  .sec-one-text > p {
+    color: white;
+  }
+  .sec-one-text > h1 {
+    /* color: white; */
+    font-size: 75px;
+    padding-top: 100px;
+    animation-name: zoom;
+    /* font-size: xx-large; */
+  }
+  .sec-one-text {
+    margin: 100px 0 30px 0;
+  }
+  .sec-one-text p {
+    /* color: white; */
+    font-size: 40px;
+    width: 50%;
+    margin: 0 auto;
+    /* font-size: xx-large; */
+  }
+  .sec-one-nav{
+    margin-top: 30px;
+  }
+  .sec-one-nav li {
+    font-size: x-large;
+    margin-right: 40px;
+    }
+
+  .m-10 {
+    padding: 100px 0;
+  }
+  .tlc {
+    text-align: center;
+  }
+  .sec-one-btn {
+    padding: 10px 40px;
+    background-color: #f6d365;
+    border-style: none;
+    border-color: #f6d365;
+    margin-bottom: 100px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .btn {
+    padding-bottom: 100px;
+    margin: 10px 10px;
+  }
+  
+  /*--------------------------------------------- section-two -------------------------------------------------- */
+  .sec-two {
+      background-color: #f6d365;
+      /* height: 800px; */
+  }
+  .sec-two-text h1 {
+      font-size: 75px;
+      padding-top: 100px;
+  }
+  .sec-two-text p {
+    font-size: 40px;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .txt p {
+      width: 50%;
+      margin: 0 auto;
+  }
+  .txt{
+      padding: 100px 0;
+      /* margin: 100px 0; */
+  }
+  /*--------------------------------------------- section-three -------------------------------------------------- */
+  .sec-three{
+      background-color: #333333;
+  }
+  .sec-three-text{
+      color: white;
+      /* text-align: center; */
+  }
+  .sec-three-text>h1{
+      /* color: white; */
+      font-size: 75px;
+       padding-top: 100px; 
+  }
+  .sec-three-text>p{
+      font-size: 40px;
+      padding-top: 50px;
+  }
+  .sec-three-img img{
+      padding: 70px 70px;
+  }
+  .sec-four{
+    background-color: #f6d365;
+  }
+  .red{
+    width: 320px;
+    height: 320px;
+    border: 10px solid #333333;
+    margin-top: 30px;
+    margin-bottom: 50px;
+   }
+    /*--------------------------------------------- section-FOUR------------------------------------------------- */
+
+  .red h1{
+      font-size: 90px;
+      padding-top: 50px;
+      text-align: center;
+  }
+  
+  .sec-four-text {
+    padding-top: 20px;
+  }
+  .sec-four-text h1{
+    font-size: 50px;
+    padding: 20px  0;
+  }
+  .red h2{
+    font-size: 30px;
+    text-align: center;
+    padding: 40px 0;
+  }
+   /*--------------------------------------------- section-five------------------------------------------------- */
+   .sec-five{
+    background-color: #333333;
+   }
+  .sec-five-text p{
+    font-size: 30px;
+    padding-bottom: 30px ;
+    width: 50%;
+    margin: 0 auto;
+  }
+    .sec-five-text{
+      color: white;
+      /* text-align: center; */
+  }
+    .sec-five-text>h1{
+      /* color: white; */
+      font-size: 75px;
+       padding-top: 100px; 
+  }
+   .sec-five-text>p{
+    font-size: 35px;
+    padding-top: 50px;
+    width: 100%;
+  }
+   .sec-five-img img{
+      padding: 70px 70px;
+  }
+
+   /*--------------------------------------------- section-six------------------------------------------------- */
+   .sec-six{
+    background-image: url(../image/sec-six-bg.png);
+    background-position: center;
+    text-align: center;
+   }
+   .sec-six-img{
+    padding-top: 90px;
+   }
+    .sec-six-text{
+      color:white;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .sec-six-text p{
+      width: 50%;
+      margin: 0 auto;
+      padding: 30px 0;
+    }
+     .sec-six-text h1{
+      width: 50%;
+      margin: 0 auto;
+      padding-bottom: 100px;
+    }

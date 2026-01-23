@@ -1,0 +1,357 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.wrapper{
+    width: 100%;
+    height: 80px;
+    background-color: #303030;
+}
+.logo{
+    padding-left: 30px;
+   
+}
+.row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+li {
+    list-style-type: none;
+   
+}
+a {
+    color: aliceblue;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    
+}
+.left>li{
+    padding: 30px;
+}
+.right>li{
+    padding: 10px;
+}
+a>i{
+    color: aliceblue;
+    padding-right:30px;
+}
+a:hover{
+    color: #e8631c;
+}
+#section-1{
+    
+    
+    
+    background-image: url(../images/background-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container{
+    width: 90%;
+    height:500px;
+    margin: auto;
+}
+.row2{
+width: 300px;
+padding: 30px;
+height: 100px;
+}
+.col-50{
+    padding-top: 200px;
+}
+div[class*="box1"]{
+    margin: 0px 20px;
+    padding-top: 250px;
+}
+.col-50>h1{
+    font-size: 70px;
+color: #ffffff;
+font-weight: 400;
+font-family: "Oswald";
+}
+.col-50>p{
+    width: 500px;
+height: 100px;
+font-size: 20px;
+font-weight: 20;
+color: #ffffff;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+button{
+    width: 250px;
+height: 50px;
+margin-top: 10px;
+border-radius: 4px;
+background-color: #e8631c;
+color: aliceblue;
+font-size: 20px;
+}
+button:hover{
+    background-color: black;
+    color: #ffffff;
+}
+.col-33{
+    width: 33.33%;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #303030;
+    color: aliceblue;
+}
+#section-2{
+    background-color: #e8631c;
+}
+.container>h1{
+    font-size: 50px;
+    margin: 0 350px;
+    color: #ffffff;
+    
+}
+.container>p{
+    font-size: 18px;
+    margin: 0 300px;
+    margin-top: 10px;
+    color: #ffffff;
+}
+.col-33 h1{
+    font-size: 30px;
+    padding-left:90px ;
+    padding-top: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.col-33 p{
+    font-size: 15px;
+    
+    padding-top: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#section-3{
+    background-color: #303030;
+}
+#section-42{
+    background-color: #e8631c;
+}
+.col-42 h1{
+    font-size: 40px;
+    
+    color: #ffffff;
+    text-align: center;
+}
+.col-42 p{
+    font-size:18px ;
+    
+    margin-top: 20px;
+    color: #ffffff;
+    text-align: center;
+    padding-left: 50px;
+}
+.col-42 button{
+    width: 200px;
+    
+    margin-left: 100px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: black;
+
+}
+.col-42 button:hover{
+    background-color: white;
+    color: black;
+}
+.col-66{
+    width: 33.33%;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #e8631c;
+    color: aliceblue;
+}
+.col-66 img{
+  padding-left:90px ;
+  padding-top: 20px;
+}
+.col-66 h1{
+    font-size: 30px;
+    padding-left:90px ;
+    padding-top: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.col-66 p{
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.col-66 button
+{
+    width: 200px;
+    padding-left:20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+height: 30px;
+border-radius: 4px;
+background-color: #303030;
+}
+.col-66 button:hover{
+    background-color: #ffffff;
+    color: black;
+}
+#section-44{
+    background-color:#e8631c;
+
+}
+.container-2{
+    height: 100%;
+}
+.col-44{
+    margin: 50px;
+}
+#section-44 button{
+    background-color: black;
+    margin-top:50px ;
+    margin-left: 100px;
+    color: #ffffff;
+    text-align: center;
+
+}
+#section-44 button:hover{
+    background-color: #ffffff;
+    color: #303030;
+}
+#section-44 h1{
+    font-size: 40px;
+    margin-left: 50px;
+    color: #ffffff;
+    text-align: center;
+}
+#section-44 p{
+    font-size:18px ;
+    margin-left: 50px;
+    margin-top: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+#section-55{
+    background-color:  #303030;
+}
+#section-55 h2{
+    font-size: 40px;
+    text-align: center;
+    color: whitesmoke;
+    padding-top: 50px;
+}
+#section-55 p{
+    font-size: 20px;
+    text-align: center;
+    color: whitesmoke;
+    padding-top: 20px;
+}
+.col-55 h1{
+      font-size: 50px;
+      color: #ffffff;
+      margin-top: 130px;
+}
+.col-55 p{
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+#section-66{
+    background-image: url(../images/background-2.png);
+    background-position: center;
+    background-size: cover;
+}
+#section-66 h1{
+    font-size: 30px;
+    text-align: center;
+    padding-top:30px ;
+    color: #ffffff;
+
+}
+#section-66 p{
+    font-size: 20px;
+    padding-top: 130px;
+    padding-left: 300px;
+    color: #ffffff;
+}
+.container-1{
+    width: 100%;
+    height: 400px;
+}
+.section-77{
+    background-color: #e8631c;
+    position: relative;
+    overflow: hidden;
+}
+.section-77 h1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+    padding-top: 30px;
+}
+.section-77 p{
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    padding-top: 0px;
+}
+.input{
+    padding-left: 350px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+.input>input{
+    padding: 10px;
+}
+.input>button{
+    background-color: #303030;
+    color: #ffffff;
+    font-size: 20px;
+}
+.input>button:hover{
+    background-color: #ffffff;
+    color: black;
+}
+#section-88{
+    background-color:#303030;
+    
+}
+#section-88 h1{
+    color: #ffffff;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding-left: 10px;
+    padding-top: 10px;
+  
+}
+#section-88 p{
+    color: #ffffff;
+    font-size: 15px;
+    font-family: sans-serif;
+    padding-top: 10px;
+  
+}
+#section-88 h4{
+    color: whitesmoke;
+    font-size:15px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.sticker{
+    padding-top: 40px;
+}
+.image{
+    position: absolute;
+    left: -500px;
+    bottom: 0px;
+
+
+}
