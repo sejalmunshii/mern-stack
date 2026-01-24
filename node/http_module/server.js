@@ -37,6 +37,6 @@ const server=http.createServer((req,res)=>{
         res.end('404 Page Not Found');
     }
 })
-server.listen(3000,()=>{
+server.listen(5000,()=>{
     console.log('server is running...');
 })
