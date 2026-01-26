@@ -24,10 +24,12 @@
 }
 
 .pizza-img {
- width: 100%;
-  height: 180px;
-  object-fit: cover;
+  width: 100%;
+  height: 180px; /* Ya jo bhi height aapne rakhi ho */
+  object-fit: contain; /* Isse poori image box ke andar fit ho jayegi bina kate */
+  background-color: #f9f9f9; /* Extra space mein light color dikhega */
   transition: transform 0.5s ease; /* Zoom animation */
+  border-radius: 12px 12px 0 0;
 }
 .pizza-card:hover .pizza-img {
   transform: scale(1.08); /* Image zooms in slightly */

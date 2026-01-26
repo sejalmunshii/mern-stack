@@ -1,0 +1,218 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Thoda transparent black */
+  backdrop-filter: blur(4px); /* Modern Glass effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+.modal-info {
+  padding: 20px;
+}
+.modal-info h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 10px 0 5px 0;
+  text-transform: capitalize;
+}
+.modal-info .desc {
+  font-size: 14px;
+  color: #666; /* Grey color for description */
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.modal-info .read-more {
+  color: #006642;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: underline;
+}
+.customisable-text {
+  font-size: 12px;
+  color: #888;
+  margin-top: 10px;
+  display: block;
+}
+.modal-content {
+  background: white;
+  width: 950px;
+  max-width: 90%;
+  height: 85vh;
+  border-radius: 24px;
+  display: flex;
+  position: relative;
+  overflow: hidden; /* Image corners ko round rakhne ke liye */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #ddd;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+.close-btn:hover {
+  background: #ff4d4d;
+  color: white;
+  transform: rotate(90deg); /* Style factor */
+  border-color: #ff4d4d;
+}
+.modal-body {
+  display: flex;
+}
+
+.modal-img {
+  width: 80%;
+  border-radius: 10px;
+  margin: 10px;
+ /* Height ko container ke barabar rakhein */
+  object-fit: cover; /* Isse image "zoom" hokar ache se set ho jayegi */
+  display: block;
+}
+.modal-left {
+  flex: 1;
+  padding: 0; /* Padding hata dein taaki image edge tak jaye */
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-right {
+  flex: 1.2;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+.modal-right h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.modal-right h4::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+.section-subtitle {
+  font-size: 13px;
+  color: #777;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* --- Price & Text inside Variant Cards --- */
+.variant-name {
+  font-weight: 600;
+  color: #222;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.variant-serves {
+  font-size: 12px;
+  color: #888;
+}
+
+.variant-price {
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 16px;
+}
+.variants-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.variant-card {
+  border: 2px solid #eee;
+  padding: 15px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.variant-card:hover {
+  border-color: #006642;
+  background: #f0fdf4;
+  transform: scale(1.02); /* Chota sa pop effect */
+}
+
+.variant-card.active {
+  border-color: #006642;
+  background: #f0fdf4;
+  box-shadow: 0 4px 12px rgba(0, 102, 66, 0.1);
+}
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+}
+.variant-card.active .radio-circle {
+  border-color: #006642;
+}
+.variant-card.active .radio-circle::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #006642;
+  border-radius: 50%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.add-to-cart-footer {
+  background: #006642;
+  color: white;
+  padding: 18px 25px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+.add-to-cart-footer:hover {
+  background: #004d32;
+  transform: translateY(-2px);
+}
+.add-to-cart-footer:active {
+  transform: translateY(0);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

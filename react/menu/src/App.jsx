@@ -1,45 +1,55 @@
 import React, { useState } from 'react';
 import { pizzaData } from './data';
 import './app.css'
-import Sidebar from './component/Sidebar';
 import Navbar from './component/Navbar';
+import PizzaModal from './component/PizzaModal';
 import PizzaCard from './component/PizzaCard';
+import Sidebar from './component/Sidebar';
 
 function App() {
   const [activeCategory, setActiveCategory] = useState("Tri Color Pizza");
+  const [selectedPizza, setSelectedPizza] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [isVegOnly, setIsVegOnly] = useState(false);
 
-  // --- FILTER LOGIC (FIXED) ---
   const filteredPizzas = pizzaData.filter(pizza => {
-    // 1. Check if category matches
     const matchesCategory = pizza.category === activeCategory;
-    
-    // 2. Check if name matches search query
     const matchesSearch = pizza.name.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    // 3. Check if it's veg (only if isVegOnly is true)
     const matchesVeg = isVegOnly ? pizza.isVeg === true : true;
-
-    // Teeno conditions true honi chahiye
     return matchesCategory && matchesSearch && matchesVeg;
   });
 
   return (
     <div className="app-layout">
       <Sidebar activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
-      
+
       <div className="main-content">
         <Navbar
-          setSearchQuery={setSearchQuery} 
-          isVegOnly={isVegOnly} 
-          setIsVegOnly={setIsVegOnly} 
+          setSearchQuery={setSearchQuery}
+          isVegOnly={isVegOnly}
+          setIsVegOnly={setIsVegOnly}
         />
-        <h2 className="section-title">{activeCategory}</h2>
         
+        <h2 className="section-title">{activeCategory}</h2>
+
+        {/* Modal yahan rahega */}
+        {selectedPizza && (
+          <PizzaModal
+            pizza={selectedPizza}
+            onClose={() => setSelectedPizza(null)}
+          />
+        )}
+
         <div className="pizza-grid">
           {filteredPizzas.length > 0 ? (
-            filteredPizzas.map(pizza => <PizzaCard key={pizza.id} pizza={pizza} />)
+            filteredPizzas.map(pizza => (
+              <PizzaCard
+                key={pizza.id} 
+                pizza={pizza} 
+                // Ab 'pizza' yahan define hai, toh ye chalega
+                onAddClick={() => setSelectedPizza(pizza)} 
+              />
+            ))
           ) : (
             <div className="no-results">Oops! Koi pizza nahi mila.</div>
           )}

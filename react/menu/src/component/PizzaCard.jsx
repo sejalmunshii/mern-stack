@@ -1,8 +1,8 @@
 import React from 'react';
 import './Pizzacard.css'; 
 
-
-const PizzaCard = ({ pizza }) => {
+// 1. Yahan onAddClick prop add karein
+const PizzaCard = ({ pizza, onAddClick }) => {
   return (
     <div className="pizza-card">
       <div className="image-container">
@@ -11,16 +11,22 @@ const PizzaCard = ({ pizza }) => {
       </div>
       
       <div className="card-body">
-        <div className="veg-indicator">
-          <div className="veg-dot"></div>
-          <span className="bestseller-text">{pizza.tag}</span>
+        <div className="veg-indicator-row">
+          <div className="veg-indicator">
+            <div className="veg-dot"></div>
+          </div>
+          {pizza.tag && <span className="bestseller-text">{pizza.tag}</span>}
         </div>
         
         <h4 className="pizza-name">{pizza.name}</h4>
         
         <div className="card-footer">
           <span className="price">₹{pizza.price}</span>
-          <button className="add-button">ADD +</button>
+          
+          {/* 2. onClick event add karein jo Modal khulega */}
+          <button className="add-button" onClick={onAddClick}>
+            ADD +
+          </button>
         </div>
       </div>
     </div>
