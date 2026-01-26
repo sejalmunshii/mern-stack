@@ -8,9 +8,9 @@ logger.on('logRequest',(url,method)=>{
 
     fs.appendFile('logs.txt',log,(err)=>{
         if(err){
-            console.log("error in log",err);
+            console.log("error log",err);
         }
-    })
+    });
 })
 
 export default logger;
