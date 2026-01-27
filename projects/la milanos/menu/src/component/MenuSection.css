@@ -1,0 +1,29 @@
+/* src/components/MenuSection.css */
+.menu-page-container {
+  display: flex; /* Sidebar aur Content ko bagal-bagal lane ke liye */
+  background-color: #f1f5f4; 
+  min-height: 100vh;
+}
+
+.content-area {
+  flex: 1; /* Ye bachi hui poori jagah le lega */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Grid layout */
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  margin: 30px 0;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

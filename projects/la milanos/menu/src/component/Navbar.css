@@ -1,0 +1,115 @@
+/* src/components/Navbar.css */
+.navbar-container {
+  background: white;
+  padding: 10px 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.top-nav {
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.store-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.open-tag {
+ color: #28a745;
+  border: 1px solid #28a745;
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.promo-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  padding: 8px 15px;
+  margin: 0 30px;
+  border-radius: 10px;
+  gap: 12px;
+}
+.promo-icon {
+  background: #006642;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.pickup-container {
+  position: relative;
+}
+.pickup-box {
+  background: #f1f1f1;
+  padding: 8px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  min-width: 100px;
+}
+.change-text {
+  display: block;
+  font-size: 11px;
+  color: #28a745;
+  text-decoration: underline;
+}
+.pickup-dropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  width: 150px;
+  z-index: 999;
+  overflow: hidden;
+}
+.dropdown-item {
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f8f9fa;
+}
+.filter-bar {
+  background-color: #d1e7dd; /* Light green strip */
+  padding: 10px 15px;
+  border-radius: 12px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.search-box {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-box input {
+  width: 250px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+}
+
+.filter-btn, .new-btn {
+  background: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
