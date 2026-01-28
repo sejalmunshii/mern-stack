@@ -4,7 +4,7 @@
   max-width: 1200px;
   margin: 30px auto;
   gap: 25px;
-  padding: 0 20px;
+  padding: 20px;
   background-color: #f1f4f7;
   font-family: 'Segoe UI', Roboto, sans-serif;
 }
@@ -231,5 +231,53 @@
 
 .remove-item:hover {
   background: #ff4d4d;
+  color: white;
+}
+
+.complete-meal-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.sides-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+.side-card {
+  min-width: 150px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.side-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.side-card h5 {
+  margin: 10px 0 5px;
+  font-size: 14px;
+}
+
+.side-card button {
+  background: #fff;
+  border: 1px solid #006642;
+  color: #006642;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.side-card button:hover {
+  background: #006642;
   color: white;
 }

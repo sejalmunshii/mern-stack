@@ -106,6 +106,7 @@ function App() {
                 cart={cart} 
                 setCart={setCart} 
                 onEdit={handleEditCartItem} 
+                addToCart={addToCart}
               />
             } 
           />

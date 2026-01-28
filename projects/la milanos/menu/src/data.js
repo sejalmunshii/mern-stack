@@ -1,5 +1,9 @@
-// src/data.js
-
+export const sidesData = [
+  { id: 101, name: "Cheesy Dip", price: 25, image: "https://images.unsplash.com/photo-1513104890138-7c749659a591", category: "Dips" },
+  { id: 102, name: "Garlic Bread", price: 99, image: "https://images.unsplash.com/photo-1513104890138-7c749659a591", category: "Sides" },
+  { id: 103, name: "Pepsi 500ml", price: 60, image: "https://images.unsplash.com/photo-1513104890138-7c749659a591", category: "Drinks" },
+  { id: 104, name: "Mousse Cup", price: 80, image: "https://images.unsplash.com/photo-1513104890138-7c749659a591", category: "Dessert" },
+];
 // 1. Categories for Sidebar (Screenshot ke hisaab se)
 export const categories = [
   { name: "Featured Items", count: 18, hasPlus: false },
