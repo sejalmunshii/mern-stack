@@ -1,0 +1,247 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+header, section, footer {
+  background-color: black;
+}
+
+.header button,
+.btn {
+  border: 1px solid white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.header img {
+  max-width: 160px;
+}
+
+/* HERO SECTION */
+.section-2 {
+  background-image: url("image/section-1-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 40px 20px;
+}
+
+.section-2 h1 {
+  font-size: clamp(26px, 4vw, 42px);
+}
+
+.section-2 h4 {
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+
+.section-2 p {
+  font-size: 15px;
+}
+
+.input-1 input {
+  border: none;
+  border-radius: 80px;
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 10px;
+}
+
+.input-1 button {
+  background-color: red;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: auto;
+}
+
+/* TRENDING SECTION */
+.section-3 {
+  position: relative;
+  padding: 20px;
+}
+.one, .two, .three, .four, .five {
+  position: absolute;
+  top: 260px;
+  font-size: 80px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.8);
+  -webkit-text-stroke: 2px white;
+  z-index: 2;
+}
+
+/* Individual positions */
+.one   { left: 70px; }
+.two   { left: 350px; }
+.three { right: 590px; }
+.four  { right: 300px; }
+
+
+.img-banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.img-banner img {
+  width: 160px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.num h1 {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 900;
+  line-height: 1;
+  font-size: 60px;
+  -webkit-text-stroke: 0.125rem rgb(255, 255, 255);
+}
+
+/* Hide numbers on small screens */
+.num {
+  display: none;
+}
+
+/* PLANS SECTION */
+.card {
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.card li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card1,
+.card2 {
+  background: linear-gradient(320deg, rgba(2,0,36,1) 0%, rgba(22,65,117,1) 47%, rgba(35,53,153,1) 100%);
+  color: aliceblue;
+}
+
+.card3 {
+  background: linear-gradient(320deg, rgba(2,0,36,1) 0%, rgba(33,22,117,1) 39%, rgba(122,35,153,1) 100%);
+  color: aliceblue;
+}
+
+.card4 {
+  background: linear-gradient(320deg, rgba(2,0,36,1) 0%, rgba(25,22,117,1) 39%, rgba(153,35,35,1) 100%);
+  color: aliceblue;
+}
+
+.c-h3 {
+  color: aliceblue;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* MORE REASONS */
+.card-c-1,
+.card-c-2,
+.card-c-3,
+.card-c-4 {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* FAQ */
+.slide button {
+  width: 100%;
+  min-height: 60px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: aliceblue;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  text-align: left;
+}
+
+.slide1 {
+  width: 100%;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: aliceblue;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* FOOTER */
+footer h5 {
+  font-size: 16px;
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.foot .col {
+  min-width: 150px;
+  margin-bottom: 20px;
+}
+
+.foot li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+.foot a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.foot a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- MEDIA QUERIES ---------------- */
+
+/* Mobile: hide numbers */
+@media (max-width: 768px) {
+  .one, .two, .three, .four, .five {
+    display: none;
+  }
+}
+/* Tablets */
+@media (min-width: 768px) {
+  .num {
+    display: block;
+  }
+
+  .img-banner img {
+    width: 180px;
+  }
+
+  .header img {
+    max-width: 180px;
+  }
+}
+
+/* Laptops & above */
+@media (min-width: 992px) {
+  .img-banner img {
+    width: 200px;
+  }
+
+  .header img {
+    max-width: 200px;
+  }
+
+  .input-1 input {
+    max-width: 420px;
+  }
+}
