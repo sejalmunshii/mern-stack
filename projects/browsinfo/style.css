@@ -1,0 +1,53 @@
+/* Hero Carousel */
+.carousel-caption h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+.carousel-caption p {
+  font-size: 18px;
+}
+
+/* Section Headings */
+.section-4 h1,
+.section-4 h2,
+h2 {
+  font-weight: bolder;
+}
+
+/* Vertical line in testimonials */
+.vertical {
+  border-left: 5px solid skyblue;
+  height: 150px;
+  position: absolute;
+  top: 20px;
+}
+
+/* Cards */
+.card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Contact Form */
+.input-1 input,
+.input-1 textarea,
+.input-1 button {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Footer */
+ul.list-unstyled li {
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .carousel-caption h1 {
+    font-size: 30px;
+  }
+  .carousel-caption p {
+    font-size: 14px;
+  }
+}
