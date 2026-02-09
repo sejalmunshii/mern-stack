@@ -1,20 +1,18 @@
 .projects-section {
   padding: 80px 20px;
-  background: radial-gradient(circle at top, #0d1b2a, #020b16);
   min-height: 100vh;
   text-align: center;
 }
 
 .projects-title {
   font-size: 2.2rem;
-  color: #6ea8fe;
+  color: #0167ff;
   margin-bottom: 10px;
 }
 
 .projects-subtitle {
   max-width: 700px;
   margin: 0 auto 30px;
-  color: #9bb0d0;
   font-size: 0.95rem;
 }
 
@@ -30,7 +28,6 @@
 .project-filters button {
   background: transparent;
   border: 1px solid #6ea8fe;
-  color: #6ea8fe;
   padding: 6px 14px;
   border-radius: 6px;
   font-size: 0.85rem;
@@ -55,7 +52,6 @@
 
 /* Card */
 .project-card {
-  background: #0b1625;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -82,7 +78,6 @@
 .project-badge {
   display: inline-block;
   background: #0d6efd;
-  color: #fff;
   font-size: 0.7rem;
   padding: 3px 8px;
   border-radius: 4px;
@@ -90,13 +85,11 @@
 }
 
 .project-content h4 {
-  color: #fff;
   font-size: 1rem;
   margin-bottom: 6px;
 }
 
 .project-content p {
-  color: #9bb0d0;
   font-size: 0.85rem;
   margin-bottom: 14px;
 }
@@ -106,7 +99,6 @@
   padding: 8px 0;
   background: transparent;
   border: 1px solid #0d6efd;
-  color: #0d6efd;
   border-radius: 6px;
   font-size: 0.85rem;
   cursor: pointer;

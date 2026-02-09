@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { ThemeContext } from "../Context/ThemeContext";
 import "./Projects.css";
 
 const projects = [
@@ -57,10 +59,12 @@ const projects = [
   },
 ];
 
+
 const Projects = () => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <section className="projects-section">
-      <h2 className="projects-title">Projects</h2>
+    <section className={`project-section py-5 ${theme === "dark" ? "bg-dark text-light" : "bg-light text-dark"}`}>
+      <h2 className="projects-title text-center">Projects</h2>
       <p className="projects-subtitle">
         Creative and results-driven professional showcasing real-world projects
         built using modern web technologies.
