@@ -1,0 +1,129 @@
+/* Contact.css */
+
+/* Container styling */
+.contact-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+      border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Heading */
+.contact-container h2 {
+    color: #0d6efd;
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.contact-container h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #0d6efd;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Floating labels effect */
+.contact-container .form-floating {
+  margin-bottom: 20px;
+}
+
+.contact-container input,
+.contact-container textarea {
+  border-radius: 10px;
+  padding: 20px 15px 10px 15px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 8px rgba(13,110,253,0.2);
+  outline: none;
+}
+
+/* Button styling */
+.contact-container button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.contact-container button:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+/* Footer contact info */
+.contact-info {
+  margin-top: 30px;
+  text-align: center;
+  color: #495057;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* For tablets */
+@media (max-width: 992px) {
+  .contact-container {
+    padding: 25px;
+    margin: 40px 20px;
+  }
+
+  .contact-container input,
+  .contact-container textarea {
+    font-size: 15px;
+    padding: 18px 12px 10px 12px;
+  }
+
+  .contact-container button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 576px) {
+  .contact-container {
+    padding: 20px 15px;
+    margin: 30px 10px;
+    border-radius: 12px;
+  }
+
+  .contact-container h2 {
+    font-size: 24px;
+  }
+
+  .contact-container input,
+  .contact-container textarea {
+    font-size: 14px;
+    padding: 15px 10px 8px 10px;
+  }
+
+  .contact-container button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact-container h2::after {
+    width: 40px;
+    height: 3px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+}

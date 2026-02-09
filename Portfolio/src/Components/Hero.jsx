@@ -44,7 +44,7 @@ useEffect(() => {
   return (
     <section className="hero section">
       <div className="container">
-        <div className="row align-items-center gy-4">
+        <div className="row align-items-center gy-2">
 
           {/* LEFT CONTENT */}
           <div className="col-lg-6">
@@ -74,18 +74,18 @@ useEffect(() => {
                 View My Work
               </Link>
 
-              <Link to="/contact" className="btn btn-outline-secondary">
+              <Link to="/resume" className="btn btn-outline-secondary">
                 Resume
               </Link>
             </div>
 
             {/* SOCIAL LINKS */}
-            <div className="d-flex gap-3 pt-3 fs-5 hero-social">
+            <div className=" gap-3 pt-3  pb-3 fs-5 hero-social">
               <a
                 href="https://github.com/sejalmunshii"
                 target="_blank"
                 rel="noreferrer"
-                className="text-primary"
+                className="text-primary pe-3"
               >
                 <BsGithub />
               </a>
@@ -94,7 +94,7 @@ useEffect(() => {
                 href="https://www.linkedin.com/in/sejal-munshi-244929385/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-primary"
+                className="text-primary pe-3"
               >
                 <FaLinkedin />
               </a>

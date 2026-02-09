@@ -1,6 +1,22 @@
 [
   {
     "email": "sejalmunshi11@gmail.com",
-    "password": "123456"
+    "password": "1234"
+  },
+  {
+    "email": "sejalmunshi08@gmail.com",
+    "password": "1234"
+  },
+  {
+    "email": "sejalmunshi08@gmail.com",
+    "password": "1234",
+    "gender": "Female",
+    "file": "Screenshot 2025-09-08 220452.png"
+  },
+  {
+    "email": "sejalmunshi11@gmail.com",
+    "password": "sejal",
+    "gender": "Female",
+    "file": "Sejal Munshi Resume.pdf"
   }
 ]

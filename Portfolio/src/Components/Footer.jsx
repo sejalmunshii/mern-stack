@@ -1,15 +1,42 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../Context/ThemeContext";
+import './Footer.css'
+import { BsFillPersonLinesFill, BsGithub } from "react-icons/bs";
+import { FaLinkedin } from "react-icons/fa6";
+import { Link } from "react-router";
 
 function Footer() {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <footer className="footer py-3 bg-light mt-5">
-      <div className="container text-center">
-        <p>© {new Date().getFullYear()} Sejal Munshi. All Rights Reserved.</p>
-        <div className="d-flex justify-content-center">
-          <a href="#" className="me-2"><i className="bi bi-twitter"></i></a>
-          <a href="#" className="me-2"><i className="bi bi-linkedin"></i></a>
-          <a href="#" className="me-2"><i className="bi bi-github"></i></a>
-        </div>
+    <footer className={`footer ${theme}`}>
+      <div className="container text-center py-4">
+        <h5 className="fs-2" >Portfolio</h5>
+        <p className="fs-6">Let's connect and make something amazing! Reach out for projects, collaborations, or just to say hi.</p>
+
+         <div className=" gap-3 pt-3  pb-3 fs-5 hero-social">
+              <a
+                href="https://github.com/sejalmunshii"
+                target="_blank"
+                rel="noreferrer"
+                className="text-primary pe-3"
+              >
+                <BsGithub/>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/sejal-munshi-244929385/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-primary pe-3"
+              >
+                <FaLinkedin />
+              </a>
+
+              <Link className="text-primary" to="/contact">
+                <BsFillPersonLinesFill />
+              </Link>
+            </div>
       </div>
     </footer>
   );

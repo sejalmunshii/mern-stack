@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 
 import { RouterProvider } from "react-router-dom";
 import Router from "./MyRouter/Router";
-import { ThemeProvider } from "./context/ThemeContext";
+import { ThemeProvider } from "./Context/ThemeContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>
