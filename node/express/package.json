@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "express-fileupload": "^1.5.2",
+    "multer": "^2.0.2"
   }
 }

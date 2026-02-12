@@ -18,5 +18,17 @@
     "password": "sejal",
     "gender": "Female",
     "file": "Sejal Munshi Resume.pdf"
+  },
+  {
+    "email": "sejalmunshi11@gmail.com",
+    "password": "12345",
+    "gender": "Female",
+    "file": "1770638351571-Screenshot 2025-09-26 162342.png"
+  },
+  {
+    "email": "sejalmunshi11@gmail.com",
+    "password": "123456789",
+    "gender": "Female",
+    "file": "Screenshot 2025-09-26 162342.png"
   }
 ]
